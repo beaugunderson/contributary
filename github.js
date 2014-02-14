@@ -5,7 +5,7 @@ var request = require('request');
 var GITHUB_API = 'https://api.github.com';
 
 // Make a request to the GitHub API
-function github(relativeUrl, cb) {
+var github = async.memoize(function (relativeUrl, cb) {
   request.get({
     url: GITHUB_API + relativeUrl,
     json: true,
@@ -16,7 +16,7 @@ function github(relativeUrl, cb) {
   }, function (err, res, body) {
     cb(err, body);
   });
-}
+});
 
 // Get the metadata for a GitHub user
 exports.user = function (user, cb) {
@@ -24,8 +24,6 @@ exports.user = function (user, cb) {
     cb(err, user);
   });
 };
-
-exports.user = async.memoize(exports.user);
 
 // Get the contributor data for a GitHub repo
 exports.contributors = function (user, repo, cb) {
@@ -43,5 +41,3 @@ exports.contributors = function (user, repo, cb) {
     });
   });
 };
-
-exports.contributors = async.memoize(exports.contributors);
