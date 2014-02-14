@@ -22,8 +22,11 @@
   },
   "homepage": "https://github.com/beaugunderson/contributary",
   "dependencies": {
-    "request": "~2.33.0",
-    "express": "~3.4.8"
+    "async": "~0.2.10",
+    "cors": "~2.1.1",
+    "express": "~3.4.8",
+    "format": "~0.2.1",
+    "request": "~2.33.0"
   },
   "devDepencies": {
     "chai": "~1.9.0",
