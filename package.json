@@ -1,0 +1,32 @@
+{
+  "name": "contributary",
+  "version": "0.0.0",
+  "description": "Get contributor information for a GitHub project.",
+  "main": "contributary.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beaugunderson/contributary.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "contributors"
+  ],
+  "author": "Beau Gunderson <beau@beaugunderson.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beaugunderson/contributary/issues"
+  },
+  "homepage": "https://github.com/beaugunderson/contributary",
+  "dependencies": {
+    "request": "~2.33.0",
+    "express": "~3.4.8"
+  },
+  "devDepencies": {
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1"
+  }
+}
